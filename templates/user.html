@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table border="1" >
+
+    My User Name Is :- {{myusername}} <p/>
+
+    Using A Single Name field = {{namefield}}
+
+    {% for key, value in result.items() %}
+
+    <tr>
+        <th>
+
+            {{key}}
+
+        </th>
+        <td>
+
+            {{value}}
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+
+<a href="{{url_for('mario')}}">Enter Property Search</a>
+
+{% endblock%}

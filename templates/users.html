@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Property Inserts</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+   <!--       <table border=5 cellpadding="15" cellspacing="15">
+            {% for row in userDetails %}
+                <tr>
+                {% for d in row %}
+                    <td>{{ d }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+
+    -->        
+        
+        <br/>
+    
+        <table border=10>
+            {% set i = 0 %}
+            {% for checkimg in dummy %}
+                {% set i = i + 1 %}
+                Table Iteration = {{i}}
+                <tr>
+                    <td>
+                        <br/>
+                        <img width="50" src="data:image/png;charset=utf-8;base64,{{checkimg}}" style="border:3px solid black" />
+                        <br/>
+                        <hr/>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>    
+
+<!--        
+         <table border=1>
+            {% for user in userDetails %}
+                <tr>
+                    <td>
+                        {{user[0]}}
+                    </td>
+                    <td>
+                        {{user[1]}}
+                    </td>
+                    <td>
+                        {{user['address']}}
+                    </td>
+                    <td>
+                        {{user[3]}}
+                    </td>
+                    <td>
+                        {{user[4]}}
+                    </td>
+                    <td>
+                       <img src="{{url_for('static',filename='pencil.png')}}" height="240" alt="Test My Picture" style="border:3px solid black" />
+                    </td>
+                    <td>
+                        <img width="250" src="data:image/png;base64,{{user[4]}}" style="border:3px solid black" />
+                    </td>
+                    <td>
+                        <img height="100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAwBAMAAACh2TSJAAAALVBMVEUAAADtNTX////3n5/+9fX719f7zMz5tLTzfHzuQED//f31jY3ybGzxXV3wVFRaxp+rAAAAAXRSTlMAQObYZgAAALVJREFUOMut0rENAjEQRNHdC4kY0QBaAQUQX0QAFSAKIKQEKiAA6VqgIkriApuV1x7pQPz0aWwHljLMpZ0CRDBGoXmeghGYKFJsUo90giAImCgV5OJF+oOgKE48MlGgs2VLBIunWesw0a1ZHqF82c7GmmIfUSpgotOly29DFPFJFDEhkgIT/V5mZuvj6XofKrHU6vyI4u37IYi36aN4h5tL7PJyif1dvCgEpapzISbCTEj5R78BZq5A5Ldh2XYAAAAASUVORK5CYII" style="background-color:yellow; text-align:center;padding: 5px;" />
+                    </td>
+                    <td>
+                        <img height="100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+                        //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+-->
+    </body>
+</html>

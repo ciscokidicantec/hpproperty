@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Property Inserts</title>
+        <style>
+            body {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Json Format</h1>
+       
+        <div id="js" >
+
+            {{jsonrow}}
+
+        </div>
+        <button type="button" onclick="myclick();">Click no params</button>
+
+        <img src="/static/helen.jpg" height="240" style="border:5px solid black" />
+
+    </body>
+    <script>
+
+        function myclick()
+        {
+            alert("entered myclick event");
+
+            //var mycars = [{name:'Susita'}, {name:'BMW'}];
+            var myjson = document.getElementById('js').innerHTML;
+            //document.write(myjson);
+            var p1=JSON.parse(myjson);
+            //document.write(p1);
+            s = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            //console.log(today.toLocaleDateString("en-US"));
+            //dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+            //
+            for (var car of p1)
+            {
+                //d = Date(car.mydt);
+                //ld = d.toLocaleString('en-GB', {
+                //        weekday: 'long', // long, short, narrow
+                //        day: 'numeric', // numeric, 2-digit
+                //        year: 'numeric', // numeric, 2-digit
+                //        month: 'long', // numeric, 2-digit, long, short, narrow
+                //        hour: 'numeric', // numeric, 2-digit
+                //        minute: 'numeric', // numeric, 2-digit
+                //        second: 'numeric', // numeric, 2-digit
+                //        });
+                document.write(car.address + s + car.mydt + s + "£"+ car.price + s + car.name + "<br />");
+            }
+
+            //alert("entered myclick event with p1 = ",p1.firstname);
+
+            return;
+        }
+
+
+    </script>
+</html>
